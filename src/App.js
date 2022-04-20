@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {DateInput} from "./components/DateInput";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = ({defaultDate = new Date().toISOString().slice(0, 10)}) => {
+
+    const [picDate, setPicDate] = useState(defaultDate);
+    console.log(picDate);
+
+    return (
+        <div className='main-div'>
+            <span className='title'> NASA - PICTURE OF THE DAY</span>
+
+            <DateInput setPicDate = {setPicDate} />
+            <hr/>
+        </div>
+    );
 }
-
-export default App;
