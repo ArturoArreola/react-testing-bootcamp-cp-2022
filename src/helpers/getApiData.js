@@ -8,6 +8,8 @@ export const getApiData = async(picDate) => {
         title: data.title,
         url: data.url,
         date: data.date,
-        explanation: data.explanation
+        explanation: data.explanation,
+        code: data?.code,
+        msg: data?.msg
     };
 }

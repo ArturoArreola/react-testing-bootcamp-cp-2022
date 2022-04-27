@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import {useFetchApi} from "../hooks/useFetchApi";
+import { useFetchApi } from "../hooks/useFetchApi";
 
 export const PicInfo = ({picDate}) => {
 

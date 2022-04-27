@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react';
-import {getApiData} from "../helpers/getApiData";
+import { useEffect, useState } from 'react';
+import { getApiData } from "../helpers/getApiData";
 
 export const useFetchApi = (picDate) => {
 
@@ -9,6 +9,11 @@ export const useFetchApi = (picDate) => {
     });
 
     useEffect(() => {
+
+        setState({
+            data: {},
+            loading: true
+        })
         getApiData(picDate)
             .then(info => {
                 setState({
