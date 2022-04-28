@@ -10,17 +10,15 @@ describe('Tests on <DateInput/>', () => {
 
     it('should display date input correctly', () => {
         setup();
-        screen.debug();
         const dateInput = screen.getByLabelText(/Choose date/i);
         expect(dateInput).toBeInTheDocument();
     });
 
-    it('Calling handleInputChange function', () => {
+    it('should not handleInputChange function', () => {
         setup();
         const dateInput = screen.getByLabelText(/Choose date/i);
         userEvent.click(dateInput);
         userEvent.type(dateInput, '2022-03-01');
-        screen.debug();
-        // ToAsk :: expect(setPicDate).toHaveBeenCalled();
+        expect(setPicDate).not.toHaveBeenCalled();
     });
 });

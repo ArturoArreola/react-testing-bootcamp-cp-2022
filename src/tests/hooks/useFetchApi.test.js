@@ -3,7 +3,7 @@ import { useFetchApi } from "../../hooks/useFetchApi";
 
 describe('Tests on useFetchApi', () => {
 
-    it('Must return initialState', async() => {
+    it('must return initialState', async() => {
         const { result, waitForNextUpdate } = renderHook(() => useFetchApi('2022-01-01'));
         const { data, loading } = result.current;
         await waitForNextUpdate();
@@ -11,7 +11,7 @@ describe('Tests on useFetchApi', () => {
         expect(loading).toBe(true);
     });
 
-    it('Must return dat and loading in false', async() => {
+    it('must return dat and loading in false', async() => {
         const { result, waitForNextUpdate } = renderHook(() => useFetchApi('2022-01-01'));
         await waitForNextUpdate();
         const {data, loading} = result.current;

@@ -13,25 +13,28 @@ export const PicInfo = ({picDate}) => {
 
     return(
         <>
-            {loading && <p>Loading...</p>}
-            <Container fixed>
-                <Card sx={{ maxWidth: 500, margin: 'auto' }}>
-                    <CardMedia
-                        component="img"
-                        height="300"
-                        image={data.url}
-                        alt="nasa-image"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {data.title}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            {data.explanation}
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Container>
+            { loading && <p>Loading...</p> }
+            { data.msg
+                ? <h3>{data.msg}</h3>
+                : <Container fixed>
+                    <Card sx={{ maxWidth: 500, margin: 'auto' }}>
+                        <CardMedia
+                            component="img"
+                            height="300"
+                            image={data.url}
+                            alt="nasa-image"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {data.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {data.explanation}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Container>
+            }
         </>
     );
 }
