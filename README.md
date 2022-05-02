@@ -53,11 +53,11 @@ If you would like to improve the UI, go ahead
 
 ## Acceptance Criteria (AC) and Score
 
-| Acceptance Criteria | Description                                                                                                                               | Points for Completed ||
-|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|
-| 1               |  When the user enters the app, the app should show the Picture of the Day.                                                                 | 15                   ||
-| 2              | When the user selects a specific date with the format YYYY-MM-DD, the app should show the picture of the day for the given date.          | 20                   ||
-| 3              | When the app fetches the API, and there is an unexpected error, the app should show a message: "There was an error, please try again."    | 25                   | |
+| Acceptance Criteria | Description                                                                                                                               | Points for Completed |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| 1               |  When the user enters the app, the app should show the Picture of the Day.                                                                 | 15                   |
+| 2              | When the user selects a specific date with the format YYYY-MM-DD, the app should show the picture of the day for the given date.          | 20                   |
+| 3              | When the app fetches the API, and there is an unexpected error, the app should show a message: "There was an error, please try again."    | 25                   |
 | 4               | When the user selects an invalid date value and clicks on the show button, the app should show a message from the API response (e.g., a day after the current date.) | 20                   |
 | 5               | Render correctly the header, footer and main content in the app. | 20                   |
 
